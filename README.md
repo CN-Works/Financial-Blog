@@ -21,12 +21,12 @@ View here into <a href="https://www.figma.com/file/Ht0DMd9M95A1V355tuFSVp/Financ
 
 <div align='left'><h1>Home page</h1>
 </div>
-<img src="https://github.com/CN-Works/Financial-Blog/assets/92865037/3e06c13a-f359-4e9e-80b4-6d6691358ce2"/>
+<img src="https://github.com/CN-Works/Financial-Blog/assets/92865037/00d5894c-7d0a-46a9-aaa9-7ffd1f386e67"/>
 
 <div align='left'><h1>Articles list</h1>
 </div>
-<img src="https://github.com/CN-Works/Financial-Blog/assets/92865037/10815c3a-3e75-4e2c-aac7-2d0a79b30d35"/>
+<img src="https://github.com/CN-Works/Financial-Blog/assets/92865037/cbd5044a-b5a5-4814-9009-06f37ca78b7f"/>
 
 <div align='left'><h1>Article page</h1>
 </div>
-<img src="https://github.com/CN-Works/Financial-Blog/assets/92865037/f4c4251a-bf30-4f8f-a1bf-6460237e9fe1"/>
+<img src="https://github.com/CN-Works/Financial-Blog/assets/92865037/bb473df6-04a4-4db0-9c5c-f50a84522862"/>
