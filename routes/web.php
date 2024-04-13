@@ -16,7 +16,7 @@ use Illuminate\Http\Request;
 
 // Page d'accueil
 Route::get('/', function () {
-    return view('welcome');
+    return view('homepage');
 })->name("homepage");
 
 // Groupe de routes pour les articles
@@ -28,7 +28,7 @@ Route::prefix("/article")->group(function() {
         $articles = App\Models\Article::all();
 
         // Renvoie la vue article-list avec la collections d'articles
-        return view('article-list', ["articles" => $articles]);
+        return view('article.list', ["articles" => $articles]);
 
     })->name("article.list");
 
@@ -38,7 +38,15 @@ Route::prefix("/article")->group(function() {
         // Retourne l'article correspondant à l'id sinon page 404
         $article = App\Models\Article::findOrFail($article);
 
-        return view('article-show', ['article' => $article]);
+        return view('article.show', ['article' => $article]);
 
     })->name("article.show");
+
+    // Page de création d'un article
+    Route::get('/create', function () {
+
+
+        // Redirige vers la page du nouvel article créé
+        return to_route('article.show', ['article' => $article]);
+    })->name("article.create");
 });
