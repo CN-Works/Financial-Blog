@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +16,17 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+// Groupe de routes pour les
+Route::prefix("/article")->group(function() {
+    // Liste des articles écrits par les utilisateurs
+    Route::get('/', function () {
+        return view('article-list');
+    })->name("article.list");
+
+    // Affiche un article via son id
+    Route::get('/{id}', function ($article) {
+        return view('article-show', ['article' => $article]);
+    })->name("article.show");
 });
