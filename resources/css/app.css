@@ -22,6 +22,11 @@ a, a:visited, a:hover, a:active {
   user-select: none;
 }
 
+/*Style de la page d'accueil*/
+body {
+    background-color: #921515;
+}
+
 .TitleCheese {
     font-size: 3.5rem;
     color: #c22828;
