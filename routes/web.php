@@ -14,19 +14,31 @@ use Illuminate\Http\Request;
 |
 */
 
+// Page d'accueil
 Route::get('/', function () {
     return view('welcome');
-});
+})->name("homepage");
 
-// Groupe de routes pour les
+// Groupe de routes pour les articles
 Route::prefix("/article")->group(function() {
-    // Liste des articles écrits par les utilisateurs
+    // Page d'accueil des articles
     Route::get('/', function () {
-        return view('article-list');
+
+        // Retourne tout les articles
+        $articles = App\Models\Article::all();
+
+        // Renvoie la vue article-list avec la collections d'articles
+        return view('article-list', ["articles" => $articles]);
+
     })->name("article.list");
 
-    // Affiche un article via son id
-    Route::get('/{id}', function ($article) {
+    // Page de détail d'un article
+    Route::get('/{article}', function ($article) {
+
+        // Retourne l'article correspondant à l'id sinon page 404
+        $article = App\Models\Article::findOrFail($article);
+
         return view('article-show', ['article' => $article]);
+
     })->name("article.show");
 });

@@ -8,9 +8,9 @@
 
         <!-- Fonts -->
         <!-- Styles -->
-        <link rel="stylesheet" href="{{ URL::asset('css/app.css'); }} ">
+        <link rel="stylesheet" href="{{ asset('css/app.css'); }} ">
     </head>
     <body>
-        <h1 class="TitleCheese">Fromage {!! $article !!}</h1>
+        <h1 class="TitleCheese">Article {!! $article !!}</h1>
     </body>
 </html>
