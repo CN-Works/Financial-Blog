@@ -1,6 +1,6 @@
-extends('layout')
+@extends('layout')
 
-@yield('title', 'Articles - Buzenco Financial Blog')
+@section('title', 'Articles - Buzenco Financial Blog')
 
 @section('pagecontent')
     <h1 class="TitleCheese">Liste des articles</h1>
