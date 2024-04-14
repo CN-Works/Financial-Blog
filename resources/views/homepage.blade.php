@@ -8,10 +8,10 @@
 
         <p class="text-center text-stone-600 text-lg max-w-2xl">Rédigé avec le soin du détail par nos utilisateurs pour vous permettre de suivre l’actualité économique partout sur vos écrans gratuitement.</p>
 
-        <a class="text-center underline-offset-auto" href="">Commencer à lire</a>
+        <a class="text-center text-lg underline underline-offset-6" href="">Commencer à lire</a>
 
         <figure class="flex items-center justify-center overflow-hidden rounded-3xl w-3/6 min-w-96 aspect-[21/9] select-none">
-            <img class="h-full w-full" src="https://i.ibb.co/Jd7J9gF/banner-homepage.jpg" alt="Blog icon">
+            <img class="h-full w-full" src="{{ asset('images/banner_homepage.jpg') }}" alt="Blog icon">
         </figure>
     </div>
 @endsection
