@@ -65,9 +65,9 @@
                     <img class="h-full" src="{{ asset('images/icon_cross.png') }}" alt="Croix fermeture burgermenu">
                 </figure>
 
-                <a class="flex items-center px-5 text-3xl" href="{{ route('homepage') }}">Accueil</a>
-                <a class="flex items-center px-5 text-3xl" href="{{ route('article.list') }}">Articles</a>
-                <a class="flex items-center px-5 text-3xl" href="">Rédiger</a>
+                <a class="flex items-center px-5 text-2xl" href="{{ route('homepage') }}">Accueil</a>
+                <a class="flex items-center px-5 text-2xl" href="{{ route('article.list') }}">Articles</a>
+                <a class="flex items-center px-5 text-2xl" href="">Rédiger</a>
             </div>
         </header>
 
