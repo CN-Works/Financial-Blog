@@ -10,7 +10,7 @@
 
         <a class="text-center text-lg underline underline-offset-6" href="">Commencer à lire</a>
 
-        <figure class="flex items-center justify-center overflow-hidden rounded-3xl w-3/6 min-w-96 aspect-[21/9] select-none">
+        <figure class="flex items-center justify-center overflow-hidden rounded-3xl w-full min-w-96 aspect-[21/9] select-none md:w-4/6 2xl:w-3/6">
             <img class="h-full w-full" src="{{ asset('images/banner_homepage.jpg') }}" alt="Blog icon">
         </figure>
     </div>
