@@ -45,6 +45,7 @@ Route::prefix("/article")->group(function() {
     // Page de création d'un article
     Route::get('/create', function () {
 
+        $article = new App\Models\Article();
 
         // Redirige vers la page du nouvel article créé
         return to_route('article.show', ['article' => $article]);
