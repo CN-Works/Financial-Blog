@@ -36,8 +36,20 @@ Route::prefix("/article")->group(function() {
 
     // Page du formulaire de création d'un article
     Route::get('/createform', function () {
-        return view('article.createform');
+        return view('article.formcreate');
     })->name("article.createform");
+
+    // Page de création d'un article
+    Route::post('/createform', function(Request $request) {
+        $article = Article::create([
+            'title' => $request->input('title'),
+            'content' => $request->input('content'),
+            'category' => $request->input('category'),
+            'image' => $request->input('image'),
+        ]);
+
+        return redirect()->route('article.show', ['article' => $article->id]);
+    });
 
     // Page de supression d'un article
     Route::get('/delete/{article}', function ($article) {
@@ -52,6 +64,33 @@ Route::prefix("/article")->group(function() {
         return to_route('article.list');
 
     })->name("article.delete");
+
+    // Page du formulaire de modification d'un article
+    Route::get('/updateform/{article}', function ($article) {
+
+        // Retourne l'article correspondant à l'id sinon page 404
+        $article = Article::findOrFail($article);
+
+        // Renvoie la vue article-formupdate avec l'article à modifier
+        return view('article.formupdate', ['article' => $article]);
+
+    })->name("article.updateform");
+
+    Route::post('/updateform/{article}', function($article, Request $request) {
+        $article = Article::findOrFail($article);
+
+        $article->update([
+            'title' => $request->input('title'),
+            'content' => $request->input('content'),
+            'category' => $request->input('category'),
+            'image' => $request->input('image'),
+        ]);
+
+        // On sauvegarde l'article précédemment modifié
+        $article->save();
+
+        return redirect()->route('article.show', ['article' => $article->id]);
+    });
     
     // Page de détail d'un article
     Route::get('/{article}', function ($article) {

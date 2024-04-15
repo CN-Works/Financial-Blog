@@ -3,7 +3,7 @@
 @section('title', 'Article - Buzenco Financial Blog')
 
 @section('pagecontent')
-    <div class="w-full min-h-svh flex flex-col items-center gap-11 py-24 px-4 lg:flex-row lg:justify-evenly lg:items-start">
+    <div class="w-full min-h-svh flex flex-col items-center gap-11 py-24 px-4 lg:flex-row lg:justify-center lg:items-start">
         <div class="w-full h-fit flex flex-col gap-6 lg:w-2/5">
             <h1 class="text-3xl font-black">{{ $article->title }}</h1>
 
@@ -14,6 +14,7 @@
             </p>
 
             <div class="flex items-center gap-3">
+                <a class="w-fit font-black text-sm underline" href="{{ route('article.updateform', ['article' => $article->id]) }}">Modifier</a>
                 <a class="w-fit font-black text-sm underline" href="{{ route('article.delete', ['article' => $article->id]) }}">Supprimer</a>
             </div>
         </div>
