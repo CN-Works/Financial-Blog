@@ -4,6 +4,7 @@ use App\Models\Article;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Validator;
+use App\Http\Requests\CreateArticleRequest;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,13 +41,8 @@ Route::prefix("/article")->group(function() {
     })->name("article.createform");
 
     // Page de création d'un article
-    Route::post('/createform', function(Request $request) {
-        $article = Article::create([
-            'title' => $request->input('title'),
-            'content' => $request->input('content'),
-            'category' => $request->input('category'),
-            'image' => $request->input('image'),
-        ]);
+    Route::post('/createform', function(CreateArticleRequest $request) {
+        $article = Article::create($request->validated());
 
         return redirect()->route('article.show', ['article' => $article->id]);
     });
@@ -76,15 +72,11 @@ Route::prefix("/article")->group(function() {
 
     })->name("article.updateform");
 
-    Route::post('/updateform/{article}', function($article, Request $request) {
+    Route::post('/updateform/{article}', function($article, CreateArticleRequest $request) {
         $article = Article::findOrFail($article);
 
-        $article->update([
-            'title' => $request->input('title'),
-            'content' => $request->input('content'),
-            'category' => $request->input('category'),
-            'image' => $request->input('image'),
-        ]);
+        // étant donné que les données sont validées, on peut les mettre à jour sans craintes
+        $article->update($request->validated());
 
         // On sauvegarde l'article précédemment modifié
         $article->save();

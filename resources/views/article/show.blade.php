@@ -14,7 +14,7 @@
             </p>
 
             <div class="flex items-center gap-3">
-                <a class="w-fit font-black text-sm underline" href="{{ route('article.updateform', ['article' => $article->id]) }}">Modifier</a>
+                <a class="w-fit font-black text-sm" href="{{ route('article.updateform', ['article' => $article->id]) }}">Modifier</a>
                 <a class="w-fit font-black text-sm underline" href="{{ route('article.delete', ['article' => $article->id]) }}">Supprimer</a>
             </div>
         </div>
