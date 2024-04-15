@@ -6,7 +6,7 @@ A simple financial blog using Laravel &amp; TailwindCSS.
 The figma design and the tasks I had to complete are just below.
 <br/>
 <br/>
-View here into <a href="https://www.figma.com/file/Ht0DMd9M95A1V355tuFSVp/Financial-Blog?type=design&mode=design&t=Fn288fH1hVxYrZSL-1" target="_blank">Figma</a>
+Figma design <a href="https://www.figma.com/file/Ht0DMd9M95A1V355tuFSVp/Financial-Blog?type=design&mode=design&t=Fn288fH1hVxYrZSL-1" target="_blank">here</a>
 <br/>
 <div align='left'><h1>Goals</h1>
 </div>
