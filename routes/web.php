@@ -25,10 +25,10 @@ Route::prefix("/article")->group(function() {
     Route::get('/', function () {
 
         // Retourne tout les articles
-        $articles = App\Models\Article::all();
+        // $articles = App\Models\Article::all();
 
         // Renvoie la vue article-list avec la collections d'articles
-        return view('article.list', ["articles" => $articles]);
+        return view('article.list');
 
     })->name("article.list");
 
