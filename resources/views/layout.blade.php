@@ -53,7 +53,7 @@
             <div id="links-list" class="h-4/5 flex items-center">
                 <a class="h-fit flex item-center px-5 text-base" href="{{ route('homepage') }}">Accueil</a>
                 <a class="h-fit flex item-center px-5 text-base" href="{{ route('article.list') }}">Articles</a>
-                <a class="h-fit flex items-center px-5 text-base" href="">Rédiger</a>
+                <a class="h-fit flex items-center px-5 text-base" href="{{ route('article.createform') }}">Rédiger</a>
             </div>
 
             <figure id="burgermenu-openbutton" class="h-2/5 flex items-center justify-center overflow-hidden select-none">
@@ -67,7 +67,7 @@
 
                 <a class="flex items-center px-5 text-2xl" href="{{ route('homepage') }}">Accueil</a>
                 <a class="flex items-center px-5 text-2xl" href="{{ route('article.list') }}">Articles</a>
-                <a class="flex items-center px-5 text-2xl" href="">Rédiger</a>
+                <a class="flex items-center px-5 text-2xl" href="{{ route('article.createform') }}">Rédiger</a>
             </div>
         </header>
 

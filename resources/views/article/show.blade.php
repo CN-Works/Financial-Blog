@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', 'Détail - Buzenco Financial Blog')
+@section('title', 'Article - Buzenco Financial Blog')
 
 @section('pagecontent')
     <div class="w-full min-h-svh flex flex-col items-center gap-11 py-24 px-4 lg:flex-row lg:justify-evenly lg:items-start">
