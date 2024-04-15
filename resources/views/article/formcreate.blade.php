@@ -4,9 +4,9 @@
 
 @section('pagecontent')
     <div class="w-full min-h-svh flex flex-col items-center gap-11 py-24 px-4">
-        <h1 class="font-black text-5xl text-center">Rédigez votre article !</h1>
+        <h1 class="font-black text-4xl text-center">Rédigez votre article !</h1>
 
-        <form class="w-3/6 flex flex-col gap-6 overflow-hidden" action="" method="post">
+        <form class="w-full flex flex-col gap-6 overflow-hidden sm:w-5/6 xl:w-3/6" action="" method="post">
             @csrf
             <div class="w-full flex flex-col gap-2 overflow-hidden">
                 <label for="title" class="text-lg">Titre de l'article</label>
@@ -28,7 +28,7 @@
                 <input type="url" id="image" name="image" class="w-full h-10 px-3 border border-stone-300 rounded-md">
             </div>
 
-            <button class="w-1/5 h-10 self-center bg-zinc-800 text-white rounded-md" type="submit">Publier</button>
+            <button class="w-2/5 h-10 self-center bg-zinc-800 text-white rounded-md sm:w-1/5" type="submit">Publier</button>
         </form>
     </div>
 @endsection
