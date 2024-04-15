@@ -3,7 +3,7 @@
 @section('title', 'Accueil - Buzenco Financial Blog')
 
 @section('pagecontent')
-    <div class="w-full min-h-svh flex flex-col items-center gap-11 py-24 px-2.5">
+    <div class="w-full min-h-svh flex flex-col items-center gap-11 py-24 px-4">
         <h1 class="font-black text-5xl text-center">Écrits par les meilleurs, destinés aux meilleurs.</h1>
 
         <p class="text-center text-stone-600 text-lg max-w-2xl">Rédigé avec le soin du détail par nos utilisateurs pour vous permettre de suivre l’actualité économique partout sur vos écrans gratuitement.</p>

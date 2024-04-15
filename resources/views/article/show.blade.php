@@ -3,7 +3,7 @@
 @section('title', 'Détail - Buzenco Financial Blog')
 
 @section('pagecontent')
-    <div class="w-full min-h-svh flex flex-col items-center gap-11 py-24 px-2.5 lg:flex-row lg:justify-center lg:items-start">
+    <div class="w-full min-h-svh flex flex-col items-center gap-11 py-24 px-4 lg:flex-row lg:justify-center lg:items-start">
         <div class="w-full h-fit flex flex-col gap-6 lg:w-2/5">
             <h1 class="text-3xl font-black">Investissements maritimes en Or</h1>
 
@@ -21,7 +21,7 @@
             </p>
         </div>
 
-        <figure class="w-full flex justify-center items-center overflow-hidden rounded-3xl select-none sm:w-4/5 lg:w-2/5 2xl:w-2/6">
+        <figure class="w-full flex justify-center items-center overflow-hidden rounded-3xl select-none sm:w-4/5 lg:w-2/5 2xl:w-1/5">
             <img class="h-full" src="{{ asset('images/article_1.jpeg') }}" alt="Image de l'article">
         </figure>
     </div>
