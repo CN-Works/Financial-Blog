@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('title');
             $table->longtext('content');
             $table->longtext('image')->nullable();
+            $table->string('category')->nullable();
         });
     }
 

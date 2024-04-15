@@ -1,7 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use App\Models\Article;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,10 +26,10 @@ Route::prefix("/article")->group(function() {
     Route::get('/', function () {
 
         // Retourne tout les articles
-        // $articles = App\Models\Article::all();
+        $articles = App\Models\Article::all();
 
         // Renvoie la vue article-list avec la collections d'articles
-        return view('article.list');
+        return view('article.list', ["articles" => $articles]);
 
     })->name("article.list");
 
@@ -50,4 +51,18 @@ Route::prefix("/article")->group(function() {
         // Redirige vers la page du nouvel article créé
         return to_route('article.show', ['article' => $article]);
     })->name("article.create");
+
+    // Page de supression d'un article
+    Route::get('/delete/{article}', function ($article) {
+
+        // Retourne l'article correspondant à l'id sinon page 404
+        $article = Article::findOrFail($article);
+
+        // Supprime l'article
+        $article->delete();
+
+        // Redirige vers la page d'accueil des articles
+        return to_route('article.list');
+
+    })->name("article.delete");
 });
