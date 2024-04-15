@@ -10,14 +10,11 @@ View here into <a href="https://www.figma.com/file/Ht0DMd9M95A1V355tuFSVp/Financ
 <br/>
 <div align='left'><h1>Goals</h1>
 </div>
+
 - Create a blog with Laravel
-<br/>
 - Use Tailwind CSS
-<br/>
 - Use Git
-<br/>
 - Make a CRUD for articles
-<br/>
 
 <div align='left'><h1>Home page</h1>
 </div>
@@ -30,3 +27,12 @@ View here into <a href="https://www.figma.com/file/Ht0DMd9M95A1V355tuFSVp/Financ
 <div align='left'><h1>Article page</h1>
 </div>
 <img src="https://github.com/CN-Works/Financial-Blog/assets/92865037/bb473df6-04a4-4db0-9c5c-f50a84522862"/>
+
+<div align='left'><h1>Installation</h1>
+</div>
+
+- Install the project
+- Type 'Composer install' in the command line
+- Install the database named 'buzencofinancialblog'
+- Setup MySql in the ENV file with the correct database name & password
+- Start the project with 'php artisan serve' command
